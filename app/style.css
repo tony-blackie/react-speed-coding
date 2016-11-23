@@ -3,6 +3,7 @@
 @import 'styles/base/type.css';
 @import 'styles/base/util.css';
 @import 'styles/base/image.css';
-@import 'normalize.css';
+@import 'styles/base/layout.css';
+@import '../node_modules/normalize.css/normalize.css';
 @import 'styles/base/element.css';
-@import 'styles/components/world.css';
+@import 'styles/components/card.css';
