@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 const IconText = ({
     icon, text, className,
-    size, roatate, flip,
+    size, rotate, flip,
     inverse, slim }) => {
         let variation = '';
 
@@ -29,7 +29,7 @@ IconText.propTypes = {
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string,
-    size: PropTypes.oneOf(['lg', '2x', '3x', '4x', '5x']),
+    size: PropTypes.oneOf(['1x', '2x', '3x', '4x', '5x']),
     rotate: PropTypes.number,
     flip: PropTypes.oneOf(['horizontal', 'vertical']),
     inverse: PropTypes.bool,
@@ -46,3 +46,5 @@ IconText.defaultProps = {
     inverse: false,
     slim: false
 };
+
+export default IconText;
