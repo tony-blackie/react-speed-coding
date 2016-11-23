@@ -1,3 +1,8 @@
+@import 'styles/base/variables.css';
+@import 'styles/base/theme.css';
+@import 'styles/base/type.css';
+@import 'util.css';
+@import 'image.css';
 @import 'normalize.css';
 @import 'styles/base/element';
 @import 'styles/components/world';
