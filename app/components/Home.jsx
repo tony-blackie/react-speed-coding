@@ -3,6 +3,7 @@ import World from './World';
 import Card from './Card';
 import YouTube from './YouTube';
 import IconText from './IconText';
+import Workflow from './Workflow';
 
 export default class Home extends Component {
     render() {
@@ -86,6 +87,9 @@ export default class Home extends Component {
                             create variety of Infographic elements.
                         </p>
                     </Card>
+                </section>
+                <section className="stripe">
+                    <Workflow/>
                 </section>
             </section>
         );

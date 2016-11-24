@@ -4,6 +4,7 @@
 @import 'styles/base/util.css';
 @import 'styles/base/image.css';
 @import 'styles/base/layout.css';
-@import '../node_modules/normalize.css/normalize.css';
+@import 'normalize.css';
 @import 'styles/base/element.css';
 @import 'styles/components/card.css';
+@import 'styles/components/workflow.css';
