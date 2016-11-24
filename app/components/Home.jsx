@@ -4,6 +4,8 @@ import Card from './Card';
 import YouTube from './YouTube';
 import IconText from './IconText';
 import Workflow from './Workflow';
+import Button from './Button';
+import ButtonDemo from './ButtonDemo';
 
 export default class Home extends Component {
     render() {
@@ -90,6 +92,28 @@ export default class Home extends Component {
                 </section>
                 <section className="stripe">
                     <Workflow/>
+                </section>
+                <section className="stripe">
+                    <Card className="col--one-third text--center">
+                        <p>Click does not do much...</p>
+                        <Button label="Default" color="default"/>
+                        <Button label="Primary" color="primary"/>
+                        <Button label="Secondary" color="secondary"/>
+                        <Button label="Warning" color="warning"/>
+                        <Button label="Success" color="success"/>
+                        <Button label="Danger" color="danger"/>
+                    </Card>
+                    <Card className="col--quarter text--center">
+                        <ButtonDemo colors={['Primary', 'Success', 'Danger', 'Warning']} />
+                    </Card>
+                    <Card className="text--center">
+                        <ButtonDemo
+                            colors={['Secondary', 'Success', 'Danger', 'Warning']}
+                            sizes={['large', 'medium', 'medium', 'small']}
+                            icons={['coffee', 'cloud', 'flash', 'plug']}
+                            iconOnly
+                        />
+                    </Card>
                 </section>
             </section>
         );
