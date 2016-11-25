@@ -56,14 +56,6 @@ export default class Home extends Component {
                         </p>
                     </Card>
                 </section>
-                <section className="stripe--slim back--gray">
-                    <Card plain className="col--full text--center white">
-                        <p>
-                            Copyright (c) 2016, Manav Sehgal
-                            All rights reserved.
-                        </p>
-                    </Card>
-                </section>
                 <section className="stripe back--default">
                     <Card className="col--one-third text--center back--white">
                         <IconText className="primary" size="5x" icon="globe" text="Nine Component Creation Strategies"/>
@@ -113,6 +105,43 @@ export default class Home extends Component {
                             icons={['coffee', 'cloud', 'flash', 'plug']}
                             iconOnly
                         />
+                    </Card>
+                </section>
+                <section className="stripe back--default">
+                    <Card plain className="col--one-third text--center">
+                        <h1>Beautiful Responsive Forms</h1>
+                        <p className="subtext">
+                            Create beautiful forms using several variations of input controls and buttons.
+                        </p>
+                    </Card>
+                    <Card className="col--quarter back-white">
+                        <div className="input">
+                            <span className="input__label">Name</span>
+                            <input className="input__field" placeholder="Placeholder for name"/>
+                        </div>
+                        <div className="input">
+                            <input className="input__field" placeholder="Just a field"/>
+                        </div>
+                    </Card>
+                    <Card className="back--white">
+                        <div className="input">
+                            <button className="input__field" placeholder="Search Something"/>
+                        </div>
+                        <div className="input">
+                            <span className="input__label">
+                                <span className="fa fa-envelope"></span>
+                            </span>
+                            <input className="input__field" placeholder="Send another one"/>
+                            <button className="button button--warning">Send</button>
+                        </div>
+                    </Card>
+                </section>
+                <section className="stripe--slim back--gray">
+                    <Card plain className="col--full text--center white">
+                        <p>
+                            Copyright (c) 2016, Manav Sehgal
+                            All rights reserved.
+                        </p>
                     </Card>
                 </section>
             </section>
