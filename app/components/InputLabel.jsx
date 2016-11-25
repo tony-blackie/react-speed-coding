@@ -33,7 +33,7 @@ const InputLabel = (props) => {
     );
 };
 
-InputLabel.PropTypes = {
+InputLabel.propTypes = {
     label: React.PropTypes.string,
     icon: React.PropTypes.string
 };
