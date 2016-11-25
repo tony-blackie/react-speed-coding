@@ -129,7 +129,7 @@ export default class Home extends Component {
                         </div>
                         <div className="input">
                             <span className="input__label">
-                                <span className="fa fa-envelope"></span>
+                                <span className="fa fa-envelope"/>
                             </span>
                             <input className="input__field" placeholder="Send another one"/>
                             <button className="button button--warning">Send</button>

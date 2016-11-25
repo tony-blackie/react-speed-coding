@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Button = (props) => {
+
     const renderLabel = props.icon
         ? <span>
             <i className={`fa fa-${props.icon}`}></i>
