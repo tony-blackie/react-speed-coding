@@ -1,16 +1,16 @@
 import React from 'react';
 
-const InputField = (props) => (
-    <input
+const InputField = (props) => {
+    return <input
         {...props}
         className={props.className
-        ? `input__field ${props.className}`
-        : 'input__field'}
+            ? `input__field ${props.className}`
+            : 'input__field'}
         placeholder={props.placeholder}
     />
-);
+};
 
-InputLabel.propTypes = {
+InputField.propTypes = {
     placeholder: React.PropTypes.string
 };
 

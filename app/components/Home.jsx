@@ -6,6 +6,9 @@ import IconText from './IconText';
 import Workflow from './Workflow';
 import Button from './Button';
 import ButtonDemo from './ButtonDemo';
+import Input from './Input';
+import InputLabel from './InputLabel';
+import InputField from './InputField';
 
 export default class Home extends Component {
     render() {
@@ -115,25 +118,32 @@ export default class Home extends Component {
                         </p>
                     </Card>
                     <Card className="col--quarter back-white">
-                        <div className="input">
-                            <span className="input__label">Name</span>
-                            <input className="input__field" placeholder="Placeholder for name"/>
-                        </div>
-                        <div className="input">
-                            <input className="input__field" placeholder="Just a field"/>
-                        </div>
+                        <Input>
+                            <InputLabel label="Name" icon="user" />
+                            <InputField placeholder="Placeholder for name" />
+                        </Input>
+                        <Input>
+                            <InputLabel label="Street" />
+                            <InputField placeholder="Enter street address" />
+                        </Input>
+                        <Input>
+                            <InputField placeholder="Just a field" />
+                        </Input>
                     </Card>
                     <Card className="back--white">
-                        <div className="input">
-                            <button className="input__field" placeholder="Search Something"/>
-                        </div>
-                        <div className="input">
-                            <span className="input__label">
-                                <span className="fa fa-envelope"/>
-                            </span>
-                            <input className="input__field" placeholder="Send another one"/>
-                            <button className="button button--warning">Send</button>
-                        </div>
+                        <Input>
+                            <InputField />
+                            <Button color="success" icon="search" />
+                        </Input>
+                        <Input>
+                            <Button color="primary" icon="cloud" label="Connect" />
+                            <InputField placeholder="Enter server address" />
+                        </Input>
+                        <Input>
+                            <InputLabel icon="envelope" />
+                            <InputField placeholder="Send a note" />
+                            <Button color="warning" label="Send" />
+                        </Input>
                     </Card>
                 </section>
                 <section className="stripe--slim back--gray">
