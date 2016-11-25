@@ -1,5 +1,8 @@
 import React from 'react';
 import Hello from './Hello.jsx';
+import Input from './Input.jsx';
+import InputField from './InputField';
+import InputLabel from './InputLabel';
 
 export default class World extends React.Component {
 
@@ -38,18 +41,23 @@ export default class World extends React.Component {
             : this.state.currentGreeting;
 
         return (
-            <div className="World-card">
+            <div>
                 <Hello greet={renderGreeting} message="World!"/>
                 <h2>
                     <a onClick={this.slangGreet}>Slang</a>
                     &nbsp;OR&nbsp;
                     <a onClick={this.hindiGreet}>Hindi</a>
                 </h2>
-                <input type="text"
-                       value={this.state.value}
-                       placeholder="Enter a name"
-                       onChange={this.handleNameChange}
-                />
+                <Input>
+                    <InputLabel label="Name" />
+                    <InputField
+                        type="text"
+                        value={this.state.value}
+                        placeholder="Enter a name"
+                        onChange={this.handleNameChange}
+                    />
+                </Input>
+
             </div>
         );
     }
