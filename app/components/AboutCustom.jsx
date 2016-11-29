@@ -1,7 +1,9 @@
 import React from 'react';
+import World from './World';
+import Card from './Card';
 
 const AboutCustom = () => {
-    render(
+    return (
         <section className="stripe back--default">
             <Card plain className="col--half text--center">
                 <h1>Custom React Component</h1>

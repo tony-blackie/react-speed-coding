@@ -1,8 +1,8 @@
 import React from 'react';
 
 const AboutAjax = () => {
-    render(
-
+    return(
+        <div></div>
     );
 };
 

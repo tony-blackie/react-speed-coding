@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from './Card';
+import IconText from './IconText';
 
 const AboutInfographics = () => {
     render(

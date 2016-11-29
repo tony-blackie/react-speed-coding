@@ -35,10 +35,9 @@ const routeConfig = (
 );
 
 ReactDOM.render(
-    // <Router
-    //     history={hashHistory}
-    //     routes={routeConfig}
-    // />,
-    <Home />,
+    <Router
+        history={hashHistory}
+        routes={routeConfig}
+    />,
     document.getElementById('app')
 );

@@ -1,7 +1,9 @@
 import React from 'react';
+import Card from './Card';
+import IconText from './IconText';
 
 const AboutButtons = () => {
-    render(
+    return (
         <section className="stripe back--default">
             <Card className="col--one-third text--center back--white">
                 <IconText className="primary" size="5x" icon="globe" text="Nine Component Creation Strategies"/>

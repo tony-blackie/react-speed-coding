@@ -1,4 +1,9 @@
 import React from 'react';
+import Card from './Card';
+import Input from './Input';
+import InputField from './InputField';
+import Button from './Button';
+import InputLabel from './InputLabel';
 
 const AboutForms = () => {
     return (

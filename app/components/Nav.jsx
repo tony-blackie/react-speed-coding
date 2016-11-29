@@ -1,8 +1,8 @@
-import Reactr from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 const Nav = () => {
-    render(
+    return(
         <nav className="nav">
             <Link className="nav__brand" to="/">ReactSpeed</Link>
             <Link className="nav__link" activeClassName="nav__link--active" to="/book">Book</Link>
@@ -16,3 +16,5 @@ const Nav = () => {
         </nav>
     );
 };
+
+export default Nav;
