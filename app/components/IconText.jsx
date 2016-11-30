@@ -1,10 +1,13 @@
 import React, { PropTypes } from 'react';
 
-const IconText = ({
-    icon, text, className,
-    size, rotate, flip,
-    inverse, slim }) => {
-        let variation = '';
+const IconText = (props) => {
+    const {
+        icon, text, size, rotate,
+        flip, inverse, slim, ribbon,
+        active, ...rest
+    } = props;
+
+    let variation = '';
 
     variation += size ? ` fa-${size}` : '';
     variation += rotate ? ` fa-rotate-${rotate}` : '';
@@ -13,16 +16,37 @@ const IconText = ({
 
     const iconClass = `fa fa-${icon}${variation}`;
 
-    return (
-        slim
-        ? <div className={className}>
-            <i className={iconClass}></i> {text}
-          </div>
-        : <div className={className}>
-            <i className={iconClass}></i>
-            <h1>{text}</h1>
-          </div>
-    );
+    let renderIcon = null;
+
+    if (slim) {
+        renderIcon =
+            <div {...rest}>
+                <i className={iconClass}></i> {text}
+            </div>;
+    }
+
+    if (ribbon) {
+        renderIcon =
+            <div {...rest} className={`${props.className} ribbon__menu text--center`}>
+                <i className={iconClass}></i>
+                <p className={active
+                    ? 'ribbon__text--active'
+                    : 'ribbon__text'
+                }>
+                    {text}
+                </p>
+            </div>;
+    }
+
+    if (!slim && !ribbon) {
+        renderIcon =
+            <div {...rest}>
+                <i className={iconClass}></i>
+                <h1>{text}</h1>
+            </div>;
+    }
+
+    return (renderIcon);
 };
 
 IconText.propTypes = {
@@ -33,7 +57,8 @@ IconText.propTypes = {
     rotate: PropTypes.number,
     flip: PropTypes.oneOf(['horizontal', 'vertical']),
     inverse: PropTypes.bool,
-    slim: PropTypes.bool
+    slim: PropTypes.bool,
+    ribbon: PropTypes.bool
 };
 
 IconText.defaultProps = {
@@ -44,7 +69,8 @@ IconText.defaultProps = {
     rotate: null,
     flip: '',
     inverse: false,
-    slim: false
+    slim: false,
+    ribbon: false
 };
 
 export default IconText;
