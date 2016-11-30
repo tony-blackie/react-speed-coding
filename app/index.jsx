@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './components/Home';
 import Landing from './components/Landing';
 import AboutBook from './components/AboutBook';
 import AboutCharts from './components/AboutCharts';
@@ -21,7 +20,7 @@ import {
 
 const routeConfig = (
     <Route path="/" component={Landing}>
-        <IndexRoute component={AboutCharts} />
+        <IndexRoute component={AboutButtons} />
         <Route path="/book" component={AboutBook} />
         <Route path="/charts" component={AboutCharts} />
         <Route path="/embeds" component={AboutEmbeds} />
