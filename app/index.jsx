@@ -10,6 +10,7 @@ import AboutButtons from './components/AboutButtons';
 import AboutAjax from './components/AboutAjax';
 import AboutInfographics from './components/AboutInfographics';
 import AboutEmbeds from './components/AboutEmbeds';
+import MissingRoute from './components/MissingRoute';
 
 import {
     Router,
@@ -30,6 +31,7 @@ const routeConfig = (
         <Route path="/buttons" component={AboutButtons} />
         <Route path="/ajax" component={AboutAjax} />
         <Route path="/infographics" component={AboutInfographics} />
+        <Route path="*" component={MissingRoute} />
     </Route>
 );
 
