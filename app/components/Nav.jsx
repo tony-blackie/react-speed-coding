@@ -1,18 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
+import NavLink from './NavLink';
 
 const Nav = () => {
     return(
         <nav className="nav">
-            <Link className="nav__brand" to="/"><span>ReactSpeed</span>ReactSpeed</Link>
-            <Link className="nav__link" activeClassName="nav__link--active" to="/book"><span>Book</span></Link>
-            <a
-                className="nav__link"
-                href="https://github.com/manavsehgal/react-speed-book">Code</a>
-            <a
-                className="nav__link"
-                href="https://manavsehgal.github.io/react-speed-demos/">Demos</a>
-            <a className="nav__link" href="https://reactspeed.com">Website</a>
+            <NavLink to="/" brand>ReactSpeed</NavLink>
+            <NavLink to="/book">Book</NavLink>
+            <NavLink href="https://github.com/manavsehgal/react-speed-book">Code</NavLink>
+            <NavLink href="https://manavsehgal.github.io/react-speed-demos/">Demos</NavLink>
+            <NavLink href="https://reactspeed.com">Website</NavLink>
         </nav>
     );
 };
