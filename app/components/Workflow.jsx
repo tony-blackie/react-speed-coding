@@ -131,7 +131,7 @@ export default class Workflow extends React.Component {
                 <div className="workflow__text">
                     {currentStep.text}
                 </div>
-                <div className="worflow__nav">
+                <div className="workflow__nav">
                     <div onClick={this.cycleScenario} className="workflow__symbol">
                         {currentStep.symbol}
                     </div>

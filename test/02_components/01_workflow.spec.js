@@ -1,0 +1,42 @@
+import React from 'react';
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+import { shallow, mount, render } from 'enzyme';
+import Workflow from '../../app/components/Workflow.jsx';
+
+describe('<Workflow />', () => {
+    it('[Shallow] should render one .workflow component', () => {
+        const wrapper = shallow(<Workflow />);
+        expect(wrapper.is('.workflow')).to.equal(true);
+    });
+
+    it('[Shallow] should define a prop for steps', () => {
+        const wrapper = shallow(<Workflow />);
+        expect(wrapper.props().steps).to.be.defined;
+    });
+
+    it('[Static] should render one .workflow__text control', () => {
+        const wrapper = render(<Workflow />);
+        expect(wrapper.find('.workflow__text')).to.have.length(1);
+    });
+
+    it('should render workflow__steps element', () => {
+        const wrapper = render(<Workflow />);
+        expect(wrapper.find('.workflow__steps')).to.have.length(1);
+    });
+
+    it('should render workflow__nav element', () => {
+        const wrapper = render(<Workflow />);
+        expect(wrapper.find('.workflow__nav')).to.have.length(1);
+    });
+
+    it('should render workflow__symbol element', () => {
+        const wrapper = render(<Workflow />);
+        expect(wrapper.find('.workflow__symbol')).to.have.length(1);
+    });
+
+    it('should render workflow__sequence', () => {
+        const wrapper = render(<Workflow />);
+        expect(wrapper.find('.workflow__sequence')).to.have.length(1);
+    })
+});
