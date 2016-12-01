@@ -3,6 +3,7 @@ import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { shallow, mount, render } from 'enzyme';
 import Workflow from '../../app/components/Workflow.jsx';
+import sinon from 'sinon';
 
 describe('<Workflow />', () => {
     it('[Shallow] should render one .workflow component', () => {
@@ -56,5 +57,19 @@ describe('<Workflow />', () => {
     it('should change inner text of sequence elment to 1', () => {
         const wrapper = mount(<Workflow />);
         expect(wrapper.find('.workflow__sequence').text()).to.equal('1');
+    });
+
+    it('[Sinon, Full DOM] should call cycleScenario on clicking scenario button', () => {
+        sinon.spy(Workflow.prototype, 'cycleScenario');
+        const wrapper = mount(<Workflow />);
+        wrapper.find('.workflow__symbol').simulate('click');
+        expect(Workflow.prototype.cycleScenario.calledOnce).to.equal(true);
+    });
+
+    it('should call cycleSequence when element is clicked', () => {
+        sinon.spy(Workflow.prototype, 'cycleSequence');
+        const wrapper = mount(<Workflow />);
+        wrapper.find('.workflow__sequence').simulate('click');
+        expect(Workflow.prototype.cycleSequence.calledOnce).to.equal(true);
     });
 });
