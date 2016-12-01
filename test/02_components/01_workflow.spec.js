@@ -38,5 +38,23 @@ describe('<Workflow />', () => {
     it('should render workflow__sequence', () => {
         const wrapper = render(<Workflow />);
         expect(wrapper.find('.workflow__sequence')).to.have.length(1);
-    })
+    });
+
+    it('[Full DOM] should increment state on clicking step button', () => {
+        const wrapper = mount(<Workflow />);
+        wrapper.find('.workflow__sequence').simulate('click');
+        expect(wrapper.state('stepsIndex')).to.equal(1);
+    });
+
+    it('[Full DOM] should render new sequence number on clicking step button', () => {
+        const wrapper = mount(<Workflow />);
+        wrapper.setState({ stepsIndex: 1 });
+        wrapper.find('.workflow__sequence').simulate('click');
+        expect(wrapper.find('.workflow__sequence').text()).to.equal('3');
+    });
+
+    it('should change inner text of sequence elment to 1', () => {
+        const wrapper = mount(<Workflow />);
+        expect(wrapper.find('.workflow__sequence').text()).to.equal('1');
+    });
 });
