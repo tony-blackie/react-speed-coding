@@ -28,7 +28,16 @@ describe('Roadmap Redux Spec', () => {
         store.dispatch(actions.setCategoryFilter(actions.CategoryFilters.SHOW_COMPONENTS));
         expect(store.getState().categoryFilter).to.equal(actions.CategoryFilters.SHOW_COMPONENTS);
     });
-    it('should add second feature of CHAPTER category');
-    it('should add third feature of APP category');
+    it('should add second feature of CHAPTER category', () => {
+        store.dispatch(
+            actions.addFeature('Second Chapter Feature', actions.Categories.CHAPTER)
+        );
+        expect(store.getState().features.length).to.equal(2);
+        expect(store.getState().features[1].category).to.equal(actions.Categories.CHAPTER);
+
+    });
+    it('should add third feature of APP category', () => {
+        
+    });
     it('should set new search text');
 });
