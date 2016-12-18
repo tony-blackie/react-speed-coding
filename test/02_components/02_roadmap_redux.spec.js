@@ -37,7 +37,15 @@ describe('Roadmap Redux Spec', () => {
 
     });
     it('should add third feature of APP category', () => {
-        
+        store.dispatch(
+            actions.addFeature('Third App Feature', actions.Categories.APP)
+        );
+        expect(store.getState().features.length).to.equal(3);
+        expect(store.getState().features[2].category).to.equal(actions.Categories.APP);
     });
-    it('should set new search text');
+    it('should set new search text', () => {
+        expect(store.getState().searchText).to.equal('');
+        store.dispatch(actions.setSearchText('1337'));
+        expect(store.getState().searchText).to.equal('1337');
+    });
 });
